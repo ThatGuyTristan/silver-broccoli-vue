@@ -19,7 +19,7 @@
               <img
                 class="ml-4 bg-white rounded-xl"
                 id="prepend-icon"
-                :src="steamLogo" />   
+                src="./assets/steam-logo-icon.png" />   
             </template>
             <template v-slot:append>
               <v-btn 
@@ -68,7 +68,6 @@ import { computed, ref } from 'vue'
 import type { Ref } from 'vue'
 
 import { useDisplay } from 'vuetify'
-import steamLogo from './assets/steam-logo-icon.png'
 
 const { mdAndUp } = useDisplay();
 
