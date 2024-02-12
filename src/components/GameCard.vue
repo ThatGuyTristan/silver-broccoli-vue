@@ -46,7 +46,7 @@ import { useDisplay } from 'vuetify'
 
 const { mdAndUp } = useDisplay();
 
-interface Game  { 
+type Game = { 
     appid: number,
     name: string,
     playtime_forever: number,

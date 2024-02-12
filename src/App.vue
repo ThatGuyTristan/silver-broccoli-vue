@@ -72,12 +72,12 @@ import steamLogo from './assets/steam-logo-icon.png'
 
 const { mdAndUp } = useDisplay();
 
-// type Game  = { 
-//     appid: number,
-//     name: string,
-//     playtime_forever: number,
-//     img_icon_url: string,
-// }
+type Game = { 
+    appid: number,
+    name: string,
+    playtime_forever: number,
+    img_icon_url: string,
+}
 
 const username: Ref<string> = ref('naithein')
 const store = useGameStore();
@@ -90,8 +90,8 @@ const gamesInLibrary = computed(() => {
 const loading = computed(() => {
   return store.loading;
 })
-
-const game = computed(() => {
+//@ts-ignore
+const game = computed<Game>(() => {
   return store.game;
 })
 
