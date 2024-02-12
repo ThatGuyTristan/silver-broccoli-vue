@@ -14,8 +14,10 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, 'public')))
 
+const ORIGIN = process.env.ORIGIN 
+
 const corsOptions = { 
-    origin: "http://localhost:3000/"
+    origin: ORIGIN || 'http://localhost:3000'
 }
 
 app.use(cors(corsOptions));
@@ -29,7 +31,6 @@ app.get('/', (function (req, res) {
 }))
 
 const KEY = process.env.API_KEY
-console.log("key", KEY)
 
 app.get('/retrieve', (function (req, res) { 
     axios
