@@ -19,7 +19,7 @@
         <div class="text-center mx-auto text-red" v-else>
             {{ error }}. Try again
         </div>
-        <div class="d-flex justify-center mb-auto">
+        <div class="d-flex justify-center mt-auto">
             <v-avatar :size="mdAndUp ? '300px' : '64px' ">
                 <v-img :src="imgUrl" class="justify-space-evenly"> </v-img>
             </v-avatar>
