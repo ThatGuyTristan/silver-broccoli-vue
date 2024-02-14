@@ -112,7 +112,7 @@ const fetchGames = () => {
 <style scoped>
 @font-face {
   font-family: 'digitalix';
-  src: url("../public/fonts/digitalix.ttf")
+  src: url("/fonts/digitalix.ttf")
 }
 
 div:deep() .v-field__input, .v-field__append-inner { 

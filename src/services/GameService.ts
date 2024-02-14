@@ -7,7 +7,7 @@ export default {
             username: username
         }
         try { 
-            response = await axios.get("http://localhost:3000/retrieve", { params } )
+            response = await axios.get(import.meta.env.VITE_APP_RETRIEVE_URL, { params } )
         } catch (error) { 
             //@ts-ignore
             response = error.response

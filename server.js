@@ -3,6 +3,10 @@ import express from 'express'
 import bodyParser from 'body-parser'
 import cors from 'cors'
 import process from 'process';
+import dotenv from 'dotenv';
+
+dotenv.config();
+
 
 import path from 'path'
 import { fileURLToPath } from 'url';
@@ -14,6 +18,7 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, 'public')))
 
+const KEY = process.env.STEAM_API_KEY
 const ORIGIN = process.env.ORIGIN 
 
 const corsOptions = { 
@@ -30,7 +35,6 @@ app.get('/', (function (req, res) {
     // res.sendFile(path + 'index.html')
 }))
 
-const KEY = process.env.API_KEY
 
 app.get('/retrieve', (function (req, res) { 
     axios
